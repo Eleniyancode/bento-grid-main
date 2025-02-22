@@ -12,106 +12,224 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    
+
     <title>Frontend Mentor | Bento grid</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      /* html, body {
-        height: 100vh;
-        padding: 20px;
-        /* background-color: hsl(30, 38%, 92%); */
-/*} */
-html, body {
-  max-width: 100vw; /* 100% of the viewport width */
-  min-height: 100vh; /* At least 100% of the viewport height */
-  font-size: 15px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-
-main {
-  /* height: 155em; */
-  max-width: 60%;
-  display: grid;
-  grid-template-columns: 15em repeat(2, 1fr) 15em;
-  grid-template-areas: 
-  "gg aa aa dd"
-  "hh bb cc dd"
-  "hh ff ee ee";
-  /* grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); */
-  gap: 10px;
-  padding: 10px;
-  border: 2px solid black;
-}
-div {
-        border: 2px solid black;
-        padding: 5px;
-        min-width: 5em;
+      @font-face {
+        font-family: 'Myfont';
+        src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+        font-style: normal;
+        font-weight: normal;
       }
 
-.first-card {
-  grid-area: aa;
-  padding: 10px;
-  text-align: center;
+      @font-face {
+        font-family: 'Myfont2';
+        src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+        font-weight: normal;
+      }
+       
+      html, body {
+        max-width: 100vw; /* 100% of the viewport width */
+        min-height: 100vh; /* At least 100% of the viewport height */
+        font-size: 15px;
+        font-family: 'Myfont';
+      }
+     
 
-}
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-.second-card {
-  grid-area: bb;
-  overflow: hidden;
-  font-size: 15px;
-  max-height: 155px;
-  font-size: 0.75em;
-}
+      main {
+        max-width: 65%;
+        /* border: 2px solid black; */
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+      }
 
-.third-card {
-  grid-area: cc;
-  padding: 5px;
-  font-size: 0.75em;
-  max-height: 155px;
-  overflow: hidden;
-}
-.fourth-card {
-  grid-area: dd;
-  overflow: hidden;
-}
+      div {
+        /* border: 2px solid black; */
+        min-width: 1em;
+      }
 
-.fifth-card {
-  grid-area: ee;
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-}
+      .first-card {
+        padding: 25px;
+        text-align: center;
+        background-color: hsl(256, 67%, 59%);
+        border-radius: 5px;
+        border: 1px solid hsl(256, 67%, 59%);
+        color: white;
+        
+      }
 
-.sixth-card {
-  grid-area: ff;
-}
+      .first-card > h1 > span {
+        color: hsl(39, 100%, 71%);
+      }
+      .first-card > h1 {
+        /* border: 2px solid black; */
+        font-size: 2em;
+        line-height: 28px;
+        
+      }
+      .first-card > img {
+        /* border: 2px solid black; */
+      width: 8em;
+        
+      }
 
-.seventh-card {
-  grid-area: gg;
-}
+      .first-card > p {
+        /* border: 2px solid black; */
+        margin-top: -2px;
+        font-size: 1em;
+      }
 
-.eight-card {
-  grid-area: hh;
-}
+      .second-card {
+        padding: 10px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
 
+      .second-card > h2 {
+        font-size: 1.2em;
+      }
 
-.card-img {
-  min-width: 5em;
-}
+      .second-card > img {
+        width: 12em;
+      }
 
-h1 {
-  font-size: 1.5em;
-}
+      .third-card {
+        padding: 10px;
+        max-height: 7.5em;
+        overflow: hidden;
+        background-color: hsl(39, 100%, 71%);
+        border: 2px solid hsl(39, 100%, 71%);
+        border-radius: 10px;
+      }
+
+      .third-card > h2 {
+        font-size: 1.2em;
+        margin-top: -5px;
+        /* border: 2px solid black; */
+        max-width: 10em;
+        line-height: 1em;
+      }
+
+      .third-card > img {
+        width: 8em;
+        margin-top: -5px;
+      }
+
+      .fourth-card {
+        padding: 10px;
+        text-align: center;
+        background-color: hsl(254, 88%, 90%);
+        border: 2px solid hsl(254, 88%, 90%);
+        border-radius: 10px;
+      }
+
+      .fourth-card > h2 {
+        font-size: 1em;
+        margin-top: -1px;
+      }
+
+      .fourth-card > img {
+        width: 12em;
+      }
+
+      .fourth-card > p {
+        font-size: 0.9em;
+      }
+
+      .fifth-card {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: hsl(256, 67%, 59%);
+        /* border: 2px solid hsl(256, 67%, 59%); */
+        border-radius: 10px;
+      }
+
+      .fifth-card > img {
+        width: 8em;
+        margin: auto;
+      }
+
+      .fifth-card > h2 {
+        text-align: center;
+        /* border: 2px solid black; */
+        max-width: 7em;
+        margin: auto;
+        line-height: 1em;
+        font-size: 1.2em;
+        color: white;
+      }
+
+      .sixth-card {
+        padding: 10px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+      }
+
+      .sixth-card > h1 {
+        font-size: 2em;
+        margin-top: -5px;
+      }
+
+      .sixth-card > p {
+        margin-top: -20px;
+        /* border: 2px solid black; */
+      }
+
+      .sixth-card > img {
+        width: 10em;
+      }
+
+      .seventh-card {
+        padding: 10px;
+        background-color: hsl(31, 66%, 93%);
+        border: 2px solid hsl(31, 66%, 93%);
+        border-radius: 10px;
+      }
+
+      .seventh-card > h1 {
+        line-height: 0.9em;
+        font-size: 1.5em;
+      }
+
+      .seventh-card > img {
+        width: 8em;
+      }
+
+      .eight-card {
+        background-color: hsl(39, 100%, 71%);
+        border: 2px solid hsl(39, 100%, 71%);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .eight-card > h1 {
+        font-size: 1.2em;
+        max-width: 10em;
+        margin-top: -5px;
+      }
+
+      .eight-card > img {
+        width: 10em;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -121,15 +239,288 @@ h1 {
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      @media (min-width: 40em) {
+        body {
+          background-color: blueviolet;
+        }
+        main {
+          width: 80%;
+          /* border: 2px solid black; */
+          display: grid;
+          gap: 10px;
+          grid-template-columns: repeat(4, 25%);
+  grid-template-areas: 
+  "gg aa aa dd"
+  "hh bb cc dd"
+  "hh ff ee ee";
+        }
+
+        .first-card {
+          grid-area: aa;
+          /* border: 2px solid black */
+        }
+
+        .second-card {
+          grid-area: bb;
+          /* border: 2px solid black; */
+          max-height: 7.8em;
+        }
+
+        .third-card {
+          grid-area: cc;
+          /* border: 2px solid black; */
+        }
+
+        .fourth-card {
+          grid-area: dd;
+          border: 2px solid black;
+        }
+
+        .fifth-card {
+          grid-area: ee;
+          display: flex;
+          flex-direction: row;
+          /* border: 2px solid black; */
+        }
+
+        .fifth-card > h2 {
+          /* border: 2px solid black; */
+          margin-left: -20px;
+          font-size: 1.5em;
+        }
+
+        .sixth-card {
+          grid-area: ff;
+          /* border: 2px solid black; */
+        }
+
+        .sixth-card > img {
+          width: 5em;
+        }
+
+        .sixth-card > h1 {
+          font-size: 1.5em;
+          margin-bottom: 15px;
+        }
+
+        .sixth-card > p {
+          font-size: .8em;
+        }
+
+        .seventh-card {
+          grid-area: gg;
+          /* border: 2px solid black; */
+        }
+
+        .eight-card {
+          grid-area: hh;
+          /* border: 2px solid black; */
+        }
+      }
+
+      @media (min-width: 60em) {
+        body {
+          background-color: aqua;
+        }
+        main {
+          max-width: 50%;
+          display: grid;
+          grid-template-columns: repeat(4, 25%);
+        }
+
+        .seventh-card {
+        padding: 10px;
+        background-color: hsl(31, 66%, 93%);
+        border: 2px solid hsl(31, 66%, 93%);
+        border-radius: 10px;
+      }
+
+      .seventh-card > h1 {
+        /* border: 2px solid black; */
+        max-width: 85%;
+        line-height: 0.9em;
+        font-size: 2.1em;
+      }
+
+      .seventh-card > img {
+        width: 90%;
+      }
+
+      
+      .first-card {
+        padding: 25px;
+        text-align: center;
+        background-color: hsl(256, 67%, 59%);
+        border-radius: 5px;
+        border: 1px solid hsl(256, 67%, 59%);
+        color: white;
+        
+      }
+
+      .first-card > h1 > span {
+        color: hsl(39, 100%, 71%);
+      }
+      .first-card > h1 {
+        /* border: 2px solid black; */
+        /* font-size: 3em; */
+        font-size: clamp(3em, 2vw, 1em);
+        line-height: 45px;
+        max-width: 85%;
+        margin: auto;
+        margin-bottom: 40px;
+        font-family: 'Myfont2', 'san serif';
+        
+      }
+      .first-card > img {
+        /* border: 2px solid black; */
+      width: 10em;
+        
+      }
+
+      .first-card > p {
+        /* border: 2px solid black; */
+        margin-top: -2px;
+        font-size: 2em;
+      }
+      .fourth-card {
+        padding: 10px;
+        text-align: left;
+        background-color: hsl(254, 88%, 90%);
+        border: 2px solid hsl(254, 88%, 90%);
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 40em;
+      }
+
+      .fourth-card > h2 {
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+
+      .fourth-card > img {
+        width: 20em;
+      }
+
+      .fourth-card > p {
+        font-size: 1em;
+        text-align: left;
+      }
+
+      .second-card {
+        padding: 10px;
+        background-color: white;
+        /* border: 2px solid white; */
+        border-radius: 5px;
+        overflow: hidden;
+        max-height: 10em;
+      }
+
+      .second-card > h2 {
+        font-size: 1.2em;
+      }
+
+      .second-card > img {
+        width: 15em;
+      }
+
+      .third-card {
+        padding: 10px;
+        max-height: 10em;
+        overflow: hidden;
+        background-color: hsl(39, 100%, 71%);
+        /* border: 2px solid hsl(39, 100%, 71%); */
+        border-radius: 10px;
+      }
+
+      .third-card > h2 {
+        font-size: 1.35em;
+        margin-top: -5px;
+        /* border: 2px solid black; */
+        max-width: 8em;
+        line-height: 1em;
+      }
+
+      .third-card > img {
+        width: 10em;
+        margin-top: -5px;
+      }
+
+      .fifth-card {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: hsl(256, 67%, 59%);
+        border: 2px solid hsl(256, 67%, 59%);
+        border-radius: 10px;
+      }
+
+      .fifth-card > img {
+        width: 10em;
+      }
+
+      .fifth-card > h2 {
+        text-align: left;
+        /* border: 2px solid black; */
+        max-width: 7em;
+        line-height: 1em;
+        font-size: 2em;
+        color: white;
+      }
+
+      .sixth-card {
+        padding: 10px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+      }
+
+      .sixth-card > h1 {
+        font-size: 2em;
+        margin-top: -5px;
+      }
+
+      .sixth-card > p {
+        margin-top: -20px;
+        /* border: 2px solid black; */
+        font-size: 1em;
+      }
+
+      .sixth-card > img {
+        width: 10em;
+      }
+
+      .eight-card {
+        background-color: hsl(39, 100%, 71%);
+        border: 2px solid hsl(39, 100%, 71%);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .eight-card > h1 {
+        font-size: 2em;
+        max-width: 6em;
+        margin-top: -5px;
+      }
+
+      .eight-card > img {
+        width: 12em;
+      }
+
+      }
+
+      
     </style>
   </head>
   <body>
     <main>
       <div class="first-card">
-        <h1>Social Media 10x Faster with AI</h1>
+        <h1>Social Media <span>10x</span> Faster with AI</h1>
         <img class="card-img"
           src="./assets/images/illustration-five-stars.webp"
-          alt="Five Star Rating" width="150px"
+          alt="Five Star Rating" 
         />
         <p>Over 4,000 5-star reviews</p>
       </div>
@@ -138,7 +529,6 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-multiple-platforms.webp"
           alt="Multiple Platform illustration"
-          width="150px"
         />
         <h2>Manage multiple accounts and platforms.</h2>
       </div>
@@ -148,7 +538,6 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-consistent-schedule.webp"
           alt="Schedule Post"
-          width="100px"
         />
       </div>
 
@@ -157,8 +546,6 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-schedule-posts.webp"
           alt="Consistent schedule post"
-          width="300px"
-          height="200px"
         />
         <p>
           Optimize post timings to publish content at the perfect time for your
@@ -170,7 +557,6 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-grow-followers.webp"
           alt="Image showing how you grow followers"
-          width="200px"
         />
         <h2>Grow followers with non-stop content.</h2>
       </div>
@@ -181,7 +567,6 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-audience-growth.webp"
           alt="Image showing audience growth"
-          width="100px"
         />
       </div>
 
@@ -191,13 +576,12 @@ h1 {
         <img class="card-img"
           src="./assets/images/illustration-create-post.webp"
           alt="Create post image button"
-          width="100px"
         />
       </div>
 
       <div class="eight-card">
         <h1>Write your content using AI.</h1>
-        <img class="card-img" src="./assets/images/illustration-ai-content.webp" alt="ai content" width="200px" />
+        <img class="card-img" src="./assets/images/illustration-ai-content.webp" alt="ai content"  />
       </div>
     </main>
 
