@@ -241,6 +241,15 @@ div {
     grid-area: bb;
     /* border: 2px solid black; */
     max-height: 7.8em;
+    overflow: hidden;
+  }
+
+  .second-card > img {
+    width: 10em;
+  }
+
+  .second-card > h2 {
+    font-size: 1em;
   }
 
   .third-card {
@@ -248,10 +257,20 @@ div {
     /* border: 2px solid black; */
   }
 
+  .third-card > h2 {
+    font-size: 1em;
+  }
+
+  .third-card > img {
+    width: 6em;
+  }
+
   .fourth-card {
     grid-area: dd;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    overflow: hidden;
   }
+
 
   .fifth-card {
     grid-area: ee;
@@ -263,7 +282,11 @@ div {
   .fifth-card > h2 {
     /* border: 2px solid black; */
     margin-left: -20px;
-    font-size: 1.5em;
+    font-size: 1em;
+  }
+
+  .fifth-card > img {
+    width: 5em;
   }
 
   .sixth-card {
@@ -293,6 +316,10 @@ div {
     grid-area: hh;
     /* border: 2px solid black; */
   }
+
+  .eight-card > img {
+    width: 7em;
+  }
 }
 
 @media (min-width: 60em) {
@@ -300,9 +327,9 @@ div {
     background-color: aqua;
   }
   main {
-    max-width: 50%;
+    max-width: 60%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     border: 2px solid black;
   }
 
