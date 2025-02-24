@@ -25,6 +25,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  background-color: white;
 }
 
 main {
@@ -218,7 +219,7 @@ div {
 
 @media (min-width: 40em) {
   body {
-    background-color: blueviolet;
+    background-color: white;
   }
   main {
     width: 80%;
@@ -324,13 +325,13 @@ div {
 
 @media (min-width: 60em) {
   body {
-    background-color: aqua;
+    background-color: white
   }
   main {
     max-width: 60%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
 
   .seventh-card {
